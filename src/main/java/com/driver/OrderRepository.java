@@ -35,7 +35,6 @@ public class OrderRepository {
     }
 
     public void addOrderPartnerPair(String orderId, String partnerId) {
-        //orderpartnermap
         orderPartnerMap.put(orderId, partnerId);
 
         //partnerordermap
