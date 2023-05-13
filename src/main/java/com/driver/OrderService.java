@@ -8,7 +8,6 @@ import java.util.Locale;
 
 @Service
 public class OrderService {
-
     @Autowired
     OrderRepository orderRepository;
     public void addOrder(Order order) {

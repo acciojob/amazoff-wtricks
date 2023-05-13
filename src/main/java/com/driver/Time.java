@@ -7,7 +7,6 @@ public class Time {
         int mm = Integer.parseInt(arr[1]);
         return hh * 60 + mm;
     }
-
     public static String convertIntToString(int deliveryTime) {
         int hh = deliveryTime / 60;
         int mm = deliveryTime % 60;
