@@ -1,25 +1,29 @@
+
 package com.driver;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
-
+import java.util.Map;
 @Service
 public class OrderService {
-    @Autowired
-    OrderRepository orderRepository;
+    OrderRepository orderRepository=new OrderRepository();
+
+
     public void addOrder(Order order) {
         orderRepository.addOrder(order);
     }
+
 
     public void addPartner(String partnerId) {
         orderRepository.addPartner(partnerId);
     }
 
+
     public void addOrderPartnerPair(String orderId, String partnerId) {
-        orderRepository.addOrderPartnerPair(orderId, partnerId);
+        orderRepository.addOrderPartnerPair(orderId,partnerId);
     }
 
     public Order getOrderById(String orderId) {
@@ -47,7 +51,7 @@ public class OrderService {
     }
 
     public Integer getOrdersLeftAfterGivenTimeByPartnerId(String time, String partnerId) {
-        return orderRepository.getOrdersLeftAfterGivenTimeByPartnerId(time, partnerId);
+        return orderRepository.getOrdersLeftAfterGivenTimeByPartnerId(time,partnerId);
     }
 
     public String getLastDeliveryTimeByPartnerId(String partnerId) {
@@ -61,4 +65,6 @@ public class OrderService {
     public void deleteOrderById(String orderId) {
         orderRepository.deleteOrderById(orderId);
     }
+
+
 }
